@@ -1,0 +1,4 @@
+nasm -f elf ReadelfTestOne.asm -o ReadelfTestOne.o
+nasm -f elf ReadelfTestTwo.asm -o ReadelfTestTwo.o
+ld -m elf_i386 ReadelfTestOne.o ReadelfTestTwo.o -o ReadelfTest
+readelf -e ReadelfTest
